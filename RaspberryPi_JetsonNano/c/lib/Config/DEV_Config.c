@@ -6,7 +6,7 @@
 *----------------
 * |	This version:   V3.0
 * | Date        :   2019-07-31
-* | Info        :   
+* | Info        :
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documnetation files (the "Software"), to deal
@@ -226,17 +226,6 @@ static int DEV_Equipment_Testing(void)
 		break;
 	}
 #ifdef RPI
-	if(i<5) {
-		printf("Unrecognizable\r\n");
-	} else {
-		char RPI_System[10]   = {"Raspbian"};
-		for(i=0; i<6; i++) {
-			if(RPI_System[i]!= value_str[i]) {
-				printf("Please make JETSON !!!!!!!!!!\r\n");
-				return -1;
-			}
-		}
-	}
 #endif
 #ifdef JETSON
 	if(i<5) {
